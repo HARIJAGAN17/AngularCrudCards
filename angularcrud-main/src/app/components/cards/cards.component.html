@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{cardData.name}}</h5>
+      <p class="card-text">{{cardData.title}}</p>
+      <p class="card-text">{{cardData.description}}</p>
+      <button type="button" class="btn btn-danger" (click)="sendId()"><i class="fa-solid fa-trash"></i> Delete</button>
+      <button type="button" class="btn btn-warning" (click)="sendToggleButton()" (click)="sendIdUpdate()" style="margin-left:25px;"><i class="fa-solid fa-pen"></i> Update</button>
+    </div>
+  </div>

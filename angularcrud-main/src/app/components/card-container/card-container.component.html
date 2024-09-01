@@ -1,0 +1,28 @@
+
+ <div class="form-container bg-light">
+    <h2 class="text-center mb-4">Add services</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="Name" name="name" class="form-control" id="name" placeholder="Enter your name" required >
+        </div>
+        <div class="form-group">
+            <label for="title">Service</label>
+            <input type="text" [(ngModel)]="Title" name="title" class="form-control" id="title" placeholder="Enter your service name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">description</label>
+            <input type="text" [(ngModel)]="Description" name="description" class="form-control" id="description" placeholder="describe about your service" required>
+        </div>
+        <button class="btn btn-primary btn-block" (click)="createService()">Submit</button>
+    </form>
+</div>
+
+<div class="card-container" >
+    <div *ngFor="let item of servicesDb">
+        <app-cards [cardData]="item" (currId)="deleteService($event)" (sendUpdateId)="setIdParent($event)" (toggleBtn)="setToggle($event)"></app-cards>
+    </div>
+</div>
+
+<!-- ----------popupForm-------------- -->
+<app-popup-form [showPopUp]="popUpButton" (CloseButtonagain)="setToggleBack($event)" (updateDetailsSend)="GotUpdateDetails($event)" ></app-popup-form>

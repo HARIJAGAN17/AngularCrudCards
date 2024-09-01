@@ -1,0 +1,27 @@
+
+<div class="popup-container" *ngIf="showPopUp">
+    <div class="popup-content">
+      <span class="close-btn" (click)="toggleCloseButton()"><i class="fa-solid fa-xmark closebtn"></i></span>
+      <h2 class="text-center mb-4">Update</h2>
+      <form>
+        
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="UpdateName" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="title">Service</label>
+          <input type="text" [(ngModel)]="UpdateTitle"  name="title" class="form-control" id="title" placeholder="Enter your service name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" [(ngModel)]="UpdateDescription" name="description" class="form-control" id="description" placeholder="Describe your service" required>
+        </div>
+
+        <button class="btn btn-primary btn-block" style="margin-top:15px;" (click)="senUpdateDetails()" (click)="toggleCloseButton()">Submit</button>
+      </form>
+    </div>
+  </div>
+  

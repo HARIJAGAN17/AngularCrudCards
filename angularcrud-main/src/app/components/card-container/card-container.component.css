@@ -1,0 +1,23 @@
+.card-container {
+    margin:40PX;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+.card {
+    width: 100%;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container button{
+    margin-top: 7px;
+}
